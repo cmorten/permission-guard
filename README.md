@@ -7,6 +7,10 @@ A zero-dependency, minimal permission guard for [Deno](https://deno.land/) to pr
 
 ```ts
 import { guard } from "https://deno.land/x/permission-guard@master/mod.ts";
+
+await guard();
+
+console.log("Execute my code...!");
 ```
 
 ## Installation
