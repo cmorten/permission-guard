@@ -2,7 +2,8 @@
 
 A zero-dependency, minimal permission guard for [Deno](https://deno.land/) to prevent overly permissive execution of your applications.
 
-![Test](https://github.com/asos-craigmorten/permission-guard/workflows/Test/badge.svg) [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/permission-guard/mod.ts)
+![Test](https://github.com/asos-craigmorten/permission-guard/workflows/Test/badge.svg) [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/permission-guard/mod.ts) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![](https://img.shields.io/github/issues/asos-craigmorten/permission-guard)](https://img.shields.io/github/issues/asos-craigmorten/permission-guard) 
+![](https://img.shields.io/github/stars/asos-craigmorten/permission-guard) ![](https://img.shields.io/github/forks/asos-craigmorten/permission-guard) ![](https://img.shields.io/github/license/asos-craigmorten/permission-guard) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/asos-craigmorten/permission-guard/graphs/commit-activity) [![HitCount](http://hits.dwyl.com/asos-craigmorten/permission-guard.svg)](http://hits.dwyl.com/asos-craigmorten/permission-guard)
 
 ```ts
 import { guard } from "https://deno.land/x/permission-guard@master/mod.ts";
