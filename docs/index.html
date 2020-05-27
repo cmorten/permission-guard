@@ -66,19 +66,19 @@
 					<h1>permission-guard</h1>
 				</a>
 				<p>A zero-dependency, minimal permission guard for <a href="https://deno.land/">Deno</a> to prevent overly permissive execution of your applications.</p>
-				<p><img src="https://github.com/asos-craigmorten/permission-guard/workflows/Test/badge.svg" alt="Test"> <a href="https://doc.deno.land/https/deno.land/x/permission-guard/mod.ts"><img src="https://doc.deno.land/badge.svg" alt="deno doc"></a></p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permission-guard@master/mod.ts"</span>;</code></pre>
+				<p><img src="https://github.com/asos-craigmorten/permission-guard/workflows/Test/badge.svg" alt="Test"> <a href="https://doc.deno.land/https/deno.land/x/permissionGuard/mod.ts"><img src="https://doc.deno.land/badge.svg" alt="deno doc"></a></p>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permissionGuard@master/mod.ts"</span>;</code></pre>
 				<a href="#installation" id="installation" style="color: inherit; text-decoration: none;">
 					<h2>Installation</h2>
 				</a>
 				<p>This is a <a href="https://deno.land/">Deno</a> module available to import direct from this repo and via the <a href="https://deno.land/x">Deno Registry</a>.</p>
 				<p>Before importing, <a href="https://deno.land/#installation">download and install Deno</a>.</p>
 				<p>You can then import <code>permission-guard</code> straight into your project:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permission-guard@master/mod.ts"</span>;</code></pre>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permissionGuard@master/mod.ts"</span>;</code></pre>
 				<p>If you want to use a specific version of <code>permission-guard</code>, just modify the import url to contain the version:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permission-guard@0.3.0/mod.ts"</span>;</code></pre>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permissionGuard@0.3.0/mod.ts"</span>;</code></pre>
 				<p>Or if you want to use a specific commit of <code>permission-guard</code>, just modify the import url to contain the commit hash:</p>
-				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permission-guard@c21f8d6/mod.ts"</span>;</code></pre>
+				<pre><code class="language-ts"><span class="hljs-keyword">import</span> { guard } <span class="hljs-keyword">from</span> <span class="hljs-string">"https://deno.land/x/permissionGuard@c21f8d6/mod.ts"</span>;</code></pre>
 				<blockquote>
 					<p><strong>Note:</strong> <code>permission-guard</code> makes use of the unstable Deno Permissions API which requires <code>--unstable</code> to be passed in the Deno <code>run</code> command. You can use <code>permission-guard</code> in applications and not provide the <code>--unstable</code> flag, <code>permission-guard</code> will simply return as a no-op and not provide any defenses.</p>
 				</blockquote>
@@ -96,7 +96,7 @@
 				</a>
 				<ul>
 					<li><a href="https://asos-craigmorten.github.io/permission-guard/">Docs</a> - usually the best place when getting started ✨</li>
-					<li><a href="https://doc.deno.land/https/deno.land/x/permission-guard/mod.ts">Deno Docs</a></li>
+					<li><a href="https://doc.deno.land/https/deno.land/x/permissionGuard/mod.ts">Deno Docs</a></li>
 					<li><a href="https://github.com/asos-craigmorten/permission-guard/blob/master/LICENSE.md">License</a></li>
 					<li><a href="https://github.com/asos-craigmorten/permission-guard/blob/master/.github/CHANGELOG.md">Changelog</a></li>
 				</ul>
