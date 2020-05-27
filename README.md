@@ -23,13 +23,13 @@ import { guard } from "https://deno.land/x/permission-guard@master/mod.ts";
 If you want to use a specific version of `permission-guard`, just modify the import url to contain the version:
 
 ```ts
-import { guard } from "https://deno.land/x/permission-guard@0.3.0/mod.ts";
+import { guard } from "https://deno.land/x/permission-guard@1.0.0/mod.ts";
 ```
 
 Or if you want to use a specific commit of `permission-guard`, just modify the import url to contain the commit hash:
 
 ```ts
-import { guard } from "https://deno.land/x/permission-guard@c21f8d6/mod.ts";
+import { guard } from "https://deno.land/x/permission-guard@22f4cc3/mod.ts";
 ```
 
 > **Note:** `permission-guard` makes use of the unstable Deno Permissions API which requires `--unstable` to be passed in the Deno `run` command. You can use `permission-guard` in applications and not provide the `--unstable` flag, `permission-guard` will simply return as a no-op and not provide any defenses.
