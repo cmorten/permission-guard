@@ -3,8 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;guard&quot; | </title>
-	<meta name="description" content="Documentation for ">
+	<title>&quot;guard&quot; | opine</title>
+	<meta name="description" content="Documentation for opine">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="../index.html" class="title"></a>
+					<a href="../index.html" class="title">opine</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -96,15 +96,15 @@
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_guard_.html#run" class="tsd-kind-icon">RUN</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module"><a href="_guard_.html#write" class="tsd-kind-icon">WRITE</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#permissionnametoflagmap" class="tsd-kind-icon">permission<wbr>Name<wbr>ToFlag<wbr>Map</a></li>
-								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#permissionswithwhitelists" class="tsd-kind-icon">permissions<wbr>With<wbr>Whitelists</a></li>
+								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#permissionswithallowlists" class="tsd-kind-icon">permissions<wbr>With<wbr>Allowlists</a></li>
 								<li class="tsd-kind-variable tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#toplevelpermissions" class="tsd-kind-icon">top<wbr>Level<wbr>Permissions</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#getpermissionallowlist" class="tsd-kind-icon">get<wbr>Permission<wbr>Allowlist</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#getpermissiondescriptorstatus" class="tsd-kind-icon">get<wbr>Permission<wbr>Descriptor<wbr>Status</a></li>
-								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#getpermissionwhitelist" class="tsd-kind-icon">get<wbr>Permission<wbr>Whitelist</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#getunscopedpermissions" class="tsd-kind-icon">get<wbr>Unscoped<wbr>Permissions</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module"><a href="_guard_.html#guard" class="tsd-kind-icon">guard</a></li>
 								<li class="tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported"><a href="_guard_.html#handlemissinggrantedpermissions" class="tsd-kind-icon">handle<wbr>Missing<wbr>Granted<wbr>Permissions</a></li>
@@ -123,14 +123,14 @@
 					<div class="tsd-signature tsd-kind-icon">Guard<wbr>Grant<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Deno.PermissionDescriptor</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:8</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L8">guard.ts:8</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A Deno permission name or a full permission descriptor.</p>
 						</div>
-						<p>See <a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></p>
+						<p>See <a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></p>
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
@@ -139,14 +139,14 @@
 					<div class="tsd-signature tsd-kind-icon">Permission<wbr>Descriptor<wbr>Status<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionStatus</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">Deno.PermissionDescriptor</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:49</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L49">guard.ts:49</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
 							<p>A permission descriptor merged with it&#39;s status.</p>
 						</div>
-						<p>See <a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></p>
+						<p>See <a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></p>
 					</div>
 				</section>
 			</section>
@@ -158,7 +158,7 @@
 					<div class="tsd-signature tsd-kind-icon">DENIED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionState</span><span class="tsd-signature-symbol"> = &quot;denied&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:74</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L74">guard.ts:74</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -168,7 +168,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 					</div>
 				</section>
@@ -178,7 +178,7 @@
 					<div class="tsd-signature tsd-kind-icon">ENV<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> = &quot;env&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:156</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L156">guard.ts:156</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -188,7 +188,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 						<p>Note that the definition of <code>PermissionName</code> in the above spec is swapped
 						out for a set of Deno permissions which are not web-compatible.</p>
@@ -200,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">GRANTED<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionState</span><span class="tsd-signature-symbol"> = &quot;granted&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:63</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L63">guard.ts:63</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -210,7 +210,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 					</div>
 				</section>
@@ -220,7 +220,7 @@
 					<div class="tsd-signature tsd-kind-icon">HRTIME<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> = &quot;hrtime&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:184</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L184">guard.ts:184</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -230,7 +230,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 						<p>Note that the definition of <code>PermissionName</code> in the above spec is swapped
 						out for a set of Deno permissions which are not web-compatible.</p>
@@ -242,7 +242,7 @@
 					<div class="tsd-signature tsd-kind-icon">HTTP_<wbr>PROTOCOL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">RegExp</span><span class="tsd-signature-symbol"> = /^https?\:\/\//</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:222</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L222">guard.ts:222</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -257,7 +257,7 @@
 					<div class="tsd-signature tsd-kind-icon">NET<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> = &quot;net&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:142</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L142">guard.ts:142</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -267,7 +267,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 						<p>Note that the definition of <code>PermissionName</code> in the above spec is swapped
 						out for a set of Deno permissions which are not web-compatible.</p>
@@ -279,7 +279,7 @@
 					<div class="tsd-signature tsd-kind-icon">PLUGIN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> = &quot;plugin&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:170</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L170">guard.ts:170</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -289,7 +289,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 						<p>Note that the definition of <code>PermissionName</code> in the above spec is swapped
 						out for a set of Deno permissions which are not web-compatible.</p>
@@ -301,7 +301,7 @@
 					<div class="tsd-signature tsd-kind-icon">PROMPT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionState</span><span class="tsd-signature-symbol"> = &quot;prompt&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:85</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L85">guard.ts:85</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -311,7 +311,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 					</div>
 				</section>
@@ -321,7 +321,7 @@
 					<div class="tsd-signature tsd-kind-icon">READ<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> = &quot;read&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:114</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L114">guard.ts:114</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -331,7 +331,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 						<p>Note that the definition of <code>PermissionName</code> in the above spec is swapped
 						out for a set of Deno permissions which are not web-compatible.</p>
@@ -343,7 +343,7 @@
 					<div class="tsd-signature tsd-kind-icon">RUN<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> = &quot;run&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:100</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L100">guard.ts:100</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -353,7 +353,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 						<p>Note that the definition of <code>PermissionName</code> in the above spec is swapped
 						out for a set of Deno permissions which are not web-compatible.</p>
@@ -365,7 +365,7 @@
 					<div class="tsd-signature tsd-kind-icon">WRITE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol"> = &quot;write&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:128</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L128">guard.ts:128</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -375,7 +375,7 @@
 						<p>See:</p>
 						<ul>
 							<li><a href="https://w3c.github.io/permissions/#status-of-a-permission">https://w3c.github.io/permissions/#status-of-a-permission</a></li>
-							<li><a href="https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/main/cli/js/lib.deno.unstable.d.ts</a></li>
+							<li><a href="https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts">https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts</a></li>
 						</ul>
 						<p>Note that the definition of <code>PermissionName</code> in the above spec is swapped
 						out for a set of Deno permissions which are not web-compatible.</p>
@@ -387,7 +387,7 @@
 					<div class="tsd-signature tsd-kind-icon">permission<wbr>Name<wbr>ToFlag<wbr>Map<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Map</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> = new Map(topLevelPermissions.map(({ name }) &#x3D;&gt; [name, &#x60;--allow-${name}&#x60;]),)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:206</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L206">guard.ts:206</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -397,17 +397,17 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-					<a name="permissionswithwhitelists" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagConst">Const</span> permissions<wbr>With<wbr>Whitelists</h3>
-					<div class="tsd-signature tsd-kind-icon">permissions<wbr>With<wbr>Whitelists<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [READ, NET, WRITE]</span></div>
+					<a name="permissionswithallowlists" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagConst">Const</span> permissions<wbr>With<wbr>Allowlists</h3>
+					<div class="tsd-signature tsd-kind-icon">permissions<wbr>With<wbr>Allowlists<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionName</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [READ, NET, WRITE]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:215</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L215">guard.ts:215</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A list of top-level permissions that support an optional whitelist.</p>
+							<p>A list of top-level permissions that support an optional allowlist.</p>
 						</div>
 					</div>
 				</section>
@@ -417,7 +417,7 @@
 					<div class="tsd-signature tsd-kind-icon">top<wbr>Level<wbr>Permissions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Deno.PermissionDescriptor</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = [{ name: RUN },{ name: READ },{ name: WRITE },{ name: NET },{ name: ENV },{ name: PLUGIN },{ name: HRTIME },]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in guard.ts:191</li>
+							<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L191">guard.ts:191</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -430,50 +430,21 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-					<a name="getpermissiondescriptorstatus" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagConst">Const</span> get<wbr>Permission<wbr>Descriptor<wbr>Status</h3>
+					<a name="getpermissionallowlist" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagConst">Const</span> get<wbr>Permission<wbr>Allowlist</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Permission<wbr>Descriptor<wbr>Status<span class="tsd-signature-symbol">(</span>permissionDescriptors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Deno.PermissionDescriptor</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_guard_.html#permissiondescriptorstatus" class="tsd-signature-type">PermissionDescriptorStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Permission<wbr>Allowlist<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in guard.ts:231</li>
+									<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L286">guard.ts:286</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Adds the current grant status to each the provided permission descriptors.</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>permissionDescriptors: <span class="tsd-signature-type">Deno.PermissionDescriptor</span><span class="tsd-signature-symbol">[]</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_guard_.html#permissiondescriptorstatus" class="tsd-signature-type">PermissionDescriptorStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
-							<p>The requested permission statuses.</p>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-					<a name="getpermissionwhitelist" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagConst">Const</span> get<wbr>Permission<wbr>Whitelist</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>Permission<wbr>Whitelist<span class="tsd-signature-symbol">(</span>__namedParameters<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-symbol">{ </span>path<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">; </span>url<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> }</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in guard.ts:286</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Returns a permission&#39;s whitelist value if it exists, otherwise
+									<p>Returns a permission&#39;s allowlist value if it exists, otherwise
 									an empty string (&quot;&quot;) is returned.</p>
 								</div>
 							</div>
@@ -496,6 +467,35 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
+					<a name="getpermissiondescriptorstatus" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagConst">Const</span> get<wbr>Permission<wbr>Descriptor<wbr>Status</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Permission<wbr>Descriptor<wbr>Status<span class="tsd-signature-symbol">(</span>permissionDescriptors<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Deno.PermissionDescriptor</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_guard_.html#permissiondescriptorstatus" class="tsd-signature-type">PermissionDescriptorStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L231">guard.ts:231</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds the current grant status to each the provided permission descriptors.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>permissionDescriptors: <span class="tsd-signature-type">Deno.PermissionDescriptor</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><a href="_guard_.html#permissiondescriptorstatus" class="tsd-signature-type">PermissionDescriptorStatus</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+							<p>The requested permission statuses.</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
 					<a name="getunscopedpermissions" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagConst">Const</span> get<wbr>Unscoped<wbr>Permissions</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
@@ -505,13 +505,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in guard.ts:337</li>
+									<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L337">guard.ts:337</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Filters the provided permissions to those which support
-									a whitelist but have be left with top-level scope.</p>
+									an allowlist but have be left with top-level scope.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -534,7 +534,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in guard.ts:399</li>
+									<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L399">guard.ts:399</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -588,7 +588,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in guard.ts:304</li>
+									<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L304">guard.ts:304</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -620,7 +620,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in guard.ts:254</li>
+									<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L254">guard.ts:254</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -652,13 +652,13 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in guard.ts:353</li>
+									<li>Defined in <a href="https://github.com/asos-craigmorten/permission-guard/blob/40331ab/src/guard.ts#L353">guard.ts:353</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
 									<p>Handles the optional logging of recommendations when a top-level permission
-									has been requested that supports whitelisting.</p>
+									has been requested that supports allowlisting.</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -681,9 +681,6 @@
 					</li>
 					<li class="current tsd-kind-module">
 						<a href="_guard_.html">&quot;guard&quot;</a>
-					</li>
-					<li class=" tsd-kind-module">
-						<a href="_guard_test_.html">&quot;guard.test&quot;</a>
 					</li>
 				</ul>
 			</nav>
@@ -735,16 +732,16 @@
 						<a href="_guard_.html#permissionnametoflagmap" class="tsd-kind-icon">permission<wbr>Name<wbr>ToFlag<wbr>Map</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-						<a href="_guard_.html#permissionswithwhitelists" class="tsd-kind-icon">permissions<wbr>With<wbr>Whitelists</a>
+						<a href="_guard_.html#permissionswithallowlists" class="tsd-kind-icon">permissions<wbr>With<wbr>Allowlists</a>
 					</li>
 					<li class=" tsd-kind-variable tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
 						<a href="_guard_.html#toplevelpermissions" class="tsd-kind-icon">top<wbr>Level<wbr>Permissions</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-						<a href="_guard_.html#getpermissiondescriptorstatus" class="tsd-kind-icon">get<wbr>Permission<wbr>Descriptor<wbr>Status</a>
+						<a href="_guard_.html#getpermissionallowlist" class="tsd-kind-icon">get<wbr>Permission<wbr>Allowlist</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
-						<a href="_guard_.html#getpermissionwhitelist" class="tsd-kind-icon">get<wbr>Permission<wbr>Whitelist</a>
+						<a href="_guard_.html#getpermissiondescriptorstatus" class="tsd-kind-icon">get<wbr>Permission<wbr>Descriptor<wbr>Status</a>
 					</li>
 					<li class=" tsd-kind-function tsd-parent-kind-module tsd-is-private tsd-is-not-exported">
 						<a href="_guard_.html#getunscopedpermissions" class="tsd-kind-icon">get<wbr>Unscoped<wbr>Permissions</a>
@@ -786,6 +783,5 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>
