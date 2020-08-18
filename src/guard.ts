@@ -208,11 +208,11 @@ const permissionNameToFlagMap: Map<Deno.PermissionName, string> = new Map(
 );
 
 /**
- * A list of top-level permissions that support an optional whitelist.
+ * A list of top-level permissions that support an optional allowlist.
  * 
  * @private
  */
-const permissionsWithWhitelists: Deno.PermissionName[] = [READ, NET, WRITE];
+const permissionsWithAllowlists: Deno.PermissionName[] = [READ, NET, WRITE];
 
 /**
  * Regex for matching HTTP/HTTPS protocols.
@@ -276,14 +276,14 @@ const handleUngrantedTopLevelPermissions = (
 };
 
 /**
- * Returns a permission's whitelist value if it exists, otherwise
+ * Returns a permission's allowlist value if it exists, otherwise
  * an empty string ("") is returned.
  * 
  * @param param
  * @returns {string}
  * @private
  */
-const getPermissionWhitelist = (
+const getPermissionAllowlist = (
   { url, path }: any = {},
 ): string => {
   if (url) return url.replace(HTTP_PROTOCOL, "");
@@ -307,7 +307,7 @@ const handleMissingGrantedPermissions = (
 ): void => {
   if (options.log) {
     for (const { name, state, ...parameters } of permissions) {
-      const permissionArgument = getPermissionWhitelist(parameters);
+      const permissionArgument = getPermissionAllowlist(parameters);
       console.warn(
         `permission-guard: warning: missing permission "${
           permissionNameToFlagMap.get(name)
@@ -328,7 +328,7 @@ const handleMissingGrantedPermissions = (
 
 /**
  * Filters the provided permissions to those which support
- * a whitelist but have be left with top-level scope.
+ * an allowlist but have be left with top-level scope.
  * 
  * @param {Deno.PermissionDescriptor[]} granted 
  * @returns {Deno.PermissionDescriptor[]}
@@ -338,13 +338,13 @@ const getUnscopedPermissions = (
   granted: Deno.PermissionDescriptor[],
 ): Deno.PermissionDescriptor[] =>
   granted.filter(({ name, ...parameters }) =>
-    !getPermissionWhitelist(parameters) &&
-    permissionsWithWhitelists.includes(name)
+    !getPermissionAllowlist(parameters) &&
+    permissionsWithAllowlists.includes(name)
   );
 
 /**
  * Handles the optional logging of recommendations when a top-level permission
- * has been requested that supports whitelisting.
+ * has been requested that supports allowlisting.
  * 
  * @param {PermissionDescriptorStatus[]} permissions
  * @returns {void}
@@ -357,7 +357,7 @@ const handleUnscopedPermissions = (
     const flag = permissionNameToFlagMap.get(name);
 
     console.warn(
-      `permission-guard: warning: insecure top-level permission "${flag}" has been provided. Consider using a scoped permission with whitelist instead "${flag}=<allow-${name}>"`,
+      `permission-guard: warning: insecure top-level permission "${flag}" has been provided. Consider using a scoped permission with allowlist instead "${flag}=<allow-${name}>"`,
     );
   }
 };
@@ -426,7 +426,7 @@ export async function guard(options: GuardOptions = {}): Promise<void> {
     (permissionState) =>
       !grantedDescriptors.some((grantedDescriptor) =>
         permissionState.name === grantedDescriptor.name &&
-        !getPermissionWhitelist(grantedDescriptor)
+        !getPermissionAllowlist(grantedDescriptor)
       ) &&
       permissionState.state === GRANTED,
   );

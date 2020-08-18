@@ -1,6 +1,6 @@
 # granted-strict
 
-This example demonstrates using `permission-guard` specifying the following allowed / required permissions:
+This example demonstrates using Permission Guard specifying the following allowed / required permissions:
 
 - A top-level permission for `env`
 - A scoped permission for `net` scoped to the domain `http://google.com`
@@ -79,6 +79,6 @@ permission-guard: exiting due to insecure top-level permissions
 deno run --unstable --allow-env --allow-net=google.com --allow-write=/usr ./examples/granted-strict/index.ts
 ```
 
-`permission-guard` is unable to act on scoped permissions such as `--allow-write=/usr` due to limitations in the Deno Permissions API. This is because there is currently no way to enumerate all permissions that have been requested.
+Permission Guard is unable to act on scoped permissions such as `--allow-write=/usr` due to limitations in the Deno Permissions API. This is because there is currently no way to enumerate all permissions that have been requested.
 
 In this example, the `--allow-write=/usr` _could_ allow for unsolicited writes to the `/usr` directory as an attack vector, should you accidentally pull a malicious third party library into your code.

@@ -1,5 +1,5 @@
 import { describe, it } from "../test/utils.ts";
-import { expect } from "../devDeps.ts";
+import { expect } from "./deps.ts";
 
 /**
  * This test assumes it is called in the following way:
@@ -203,8 +203,8 @@ describe("guard", () => {
     });
   });
 
-  describe("when a top-level grant is requested and the permission supports whitelisting", () => {
-    const scriptPath = "./examples/granted-recommend-whitelist/index.ts";
+  describe("when a top-level grant is requested and the permission supports allowlisting", () => {
+    const scriptPath = "./examples/granted-recommend-allowlist/index.ts";
 
     it("should log a recommendation and exit with exit code 0", async () => {
       const process = await Deno.run({

@@ -1,12 +1,39 @@
-# permission-guard
+<p align="center">
+  <a href="https://www.linkedin.com/in/hannah-morten-b1218017a/"><img height="200" style="height:200px;" src="https://github.com/asos-craigmorten/permission-guard/raw/main/.github/icon.png" alt="Deno reading an opinionated book"></a>
+  <h1 align="center">Permission Guard</h1>
+</p>
+<p align="center">
+A zero-dependency, minimal permission guard for <a href="https://deno.land/">Deno</a> to prevent overly permissive execution of your applications.</p>
+<p align="center">
+   <a href="https://github.com/asos-craigmorten/permission-guard/tags/"><img src="https://img.shields.io/github/tag/asos-craigmorten/permission-guard" alt="Current version" /></a>
+   <img src="https://github.com/asos-craigmorten/permission-guard/workflows/Test/badge.svg" alt="Current test status" />
+   <a href="https://doc.deno.land/https/deno.land/x/permission-guard/mod.ts"><img src="https://doc.deno.land/badge.svg" alt="Deno docs" /></a>
+   <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs are welcome" /></a>
+   <a href="https://github.com/asos-craigmorten/permission-guard/issues/"><img src="https://img.shields.io/github/issues/asos-craigmorten/permission-guard" alt="permission-guard issues" /></a>
+   <img src="https://img.shields.io/github/stars/asos-craigmorten/permission-guard" alt="permission-guard stars" />
+   <img src="https://img.shields.io/github/forks/asos-craigmorten/permission-guard" alt="permission-guard forks" />
+   <img src="https://img.shields.io/github/license/asos-craigmorten/permission-guard" alt="permission-guard license" />
+   <a href="https://GitHub.com/asos-craigmorten/permission-guard/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="permission-guard is maintained" /></a>
+   <a href="http://hits.dwyl.com/asos-craigmorten/permission-guard"><img src="http://hits.dwyl.com/asos-craigmorten/permission-guard.svg" alt="permission-guard repository visit count" /></a>
+   <a href="https://nest.land/package/permission-guard"><img src="https://nest.land/badge.svg" alt="Published on nest.land" /></a>
+</p>
 
-A zero-dependency, minimal permission guard for [Deno](https://deno.land/) to prevent overly permissive execution of your applications.
+---
 
-![Test](https://github.com/asos-craigmorten/permission-guard/workflows/Test/badge.svg) [![deno doc](https://doc.deno.land/badge.svg)](https://doc.deno.land/https/deno.land/x/permissionGuard/mod.ts) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com) [![](https://img.shields.io/github/issues/asos-craigmorten/permission-guard)](https://img.shields.io/github/issues/asos-craigmorten/permission-guard) 
-![](https://img.shields.io/github/stars/asos-craigmorten/permission-guard) ![](https://img.shields.io/github/forks/asos-craigmorten/permission-guard) ![](https://img.shields.io/github/license/asos-craigmorten/permission-guard) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/asos-craigmorten/permission-guard/graphs/commit-activity) [![HitCount](http://hits.dwyl.com/asos-craigmorten/permission-guard.svg)](http://hits.dwyl.com/asos-craigmorten/permission-guard)
+## Table of Contents
+
+- [Getting Started](#getting-started)
+- [Installation](#installation)
+- [Features](#features)
+- [Documentation](#documentation)
+- [Examples](#examples)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Getting Started
 
 ```ts
-import { guard } from "https://deno.land/x/permissionGuard@master/mod.ts";
+import { guard } from "https://deno.land/x/permissionGuard@2.0.0/mod.ts";
 
 await guard();
 
@@ -19,25 +46,19 @@ This is a [Deno](https://deno.land/) module available to import direct from this
 
 Before importing, [download and install Deno](https://deno.land/#installation).
 
-You can then import `permission-guard` straight into your project:
+You can then import Permission Guard straight into your project:
 
 ```ts
-import { guard } from "https://deno.land/x/permissionGuard@master/mod.ts";
+import { guard } from "https://deno.land/x/permissionGuard@2.0.0/mod.ts";
 ```
 
-If you want to use a specific version of `permission-guard`, just modify the import url to contain the version:
+Permission Guard is also available on [nest.land](https://nest.land/package/permissionGuard), a package registry for Deno on the Blockchain.
 
 ```ts
-import { guard } from "https://deno.land/x/permissionGuard@1.0.0/mod.ts";
+import { guard } from "https://x.nest.land/permissionGuard@2.0.0/mod.ts";
 ```
 
-Or if you want to use a specific commit of `permission-guard`, just modify the import url to contain the commit hash:
-
-```ts
-import { guard } from "https://deno.land/x/permissionGuard@22f4cc3/mod.ts";
-```
-
-> **Note:** `permission-guard` makes use of the unstable Deno Permissions API which requires `--unstable` to be passed in the Deno `run` command. You can use `permission-guard` in applications and not provide the `--unstable` flag, `permission-guard` will simply return as a no-op and not provide any defenses.
+> **Note:** Permission Guard makes use of the unstable Deno Permissions API which requires `--unstable` to be passed in the Deno `run` command. You can use Permission Guard in applications and not provide the `--unstable` flag, Permission Guard will simply return as a no-op and not provide any defenses.
 
 ## Features
 
@@ -46,18 +67,18 @@ import { guard } from "https://deno.land/x/permissionGuard@22f4cc3/mod.ts";
 - Recommendations where permissions could be better scoped (if `log: true` provided).
 - Useful logs detailing the missing or insecure permissions (if `log: true` provided).
 
-## Docs
+## Documentation
 
-- [Docs](https://asos-craigmorten.github.io/permission-guard/) - usually the best place when getting started ✨
-- [Deno Docs](https://doc.deno.land/https/deno.land/x/permissionGuard/mod.ts)
-- [License](https://github.com/asos-craigmorten/permission-guard/blob/master/LICENSE.md)
-- [Changelog](https://github.com/asos-craigmorten/permission-guard/blob/master/.github/CHANGELOG.md)
+- [Permission Guard Docs](https://asos-craigmorten.github.io/permission-guard/) - usually the best place when getting started ✨
+- [Permission Guard Deno Docs](https://doc.deno.land/https/deno.land/x/permissionGuard/mod.ts)
+- [License](https://github.com/asos-craigmorten/permission-guard/blob/main/LICENSE.md)
+- [Changelog](https://github.com/asos-craigmorten/permission-guard/blob/main/.github/CHANGELOG.md)
 
 ## Examples
 
 To run the [examples](./examples), you have two choices:
 
-1. Clone the `permission-guard` repo locally:
+1. Clone the Permission Guard repo locally:
 
    ```bash
    git clone git://github.com/asos-craigmorten/permission-guard.git --depth 1
@@ -74,24 +95,10 @@ All the [examples](./examples) contain example commands in their READMEs to help
 
 ## Contributing
 
-[Contributing guide](https://github.com/asos-craigmorten/permission-guard/blob/master/.github/CONTRIBUTING.md)
+[Contributing guide](https://github.com/asos-craigmorten/permission-guard/blob/main/.github/CONTRIBUTING.md)
 
-## Developing
+---
 
-### Run Tests
+## License
 
-```bash
-make test
-```
-
-### Format Code
-
-```bash
-make fmt
-```
-
-### Generate Documentation
-
-```bash
-make typedoc
-```
+Permission Guard is licensed under the [MIT License](./LICENSE.md).

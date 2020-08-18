@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [2.0.0] - 18-08-2020
+
+- feat: migrate to inclusive terminology
+
 ## [1.0.0] - 27-05-2020
 
 - feat: add `guard()` method with the following features:

@@ -385,8 +385,8 @@
               (u = w,
                 l = Q,
                 (a = x).test(r = i) ? r += "e" : u.test(r)
-                ? (o = g, r = r.replace(o, ""))
-                : l.test(r) && (r += "e"));
+                  ? (o = g, r = r.replace(o, ""))
+                  : l.test(r) && (r += "e"));
           }
           (o = k).test(r) && (r = (i = (I = o.exec(r))[1]) + "i");
           (o = S).test(r) &&
@@ -962,9 +962,7 @@
         for (var f = 0; f < c.length; f++) {
           var p = c[f];
           if (
-            null == d[p] && (d[p] = 0),
-              d[p] += 1,
-              null == this.invertedIndex[p]
+            null == d[p] && (d[p] = 0), d[p] += 1, null == this.invertedIndex[p]
           ) {
             var y = Object.create(null);
             y._index = this.termIndex, this.termIndex += 1;
@@ -2095,7 +2093,7 @@ var typedoc,
               }),
               this.field.addEventListener("keydown", function (e) {
                 13 == e.keyCode || 27 == e.keyCode || 38 == e.keyCode ||
-                40 == e.keyCode
+                  40 == e.keyCode
                   ? (_this.preventPress = !0,
                     e.preventDefault(),
                     13 == e.keyCode
