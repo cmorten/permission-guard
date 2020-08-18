@@ -1,5 +1,4 @@
 <p align="center">
-  <a href="https://www.linkedin.com/in/hannah-morten-b1218017a/"><img height="200" style="height:200px;" src="https://github.com/asos-craigmorten/permission-guard/raw/main/.github/icon.png" alt="Deno reading an opinionated book"></a>
   <h1 align="center">Permission Guard</h1>
 </p>
 <p align="center">
