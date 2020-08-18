@@ -1,7 +1,7 @@
 {
     "name": "permissionGuard",
     "description": "A zero-dependency, minimal permission guard for Deno to prevent overly permissive execution of your applications.",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "repository": "https://github.com/asos-craigmorten/permission-guard",
     "stable": true,
     "files": [

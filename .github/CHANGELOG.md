@@ -1,5 +1,10 @@
 # ChangeLog
 
+## [2.0.1] - 18-08-2020
+
+- chore: remove copy pasta image link from readme
+- chore: fix nest.land registry link
+
 ## [2.0.0] - 18-08-2020
 
 - feat: migrate to inclusive terminology

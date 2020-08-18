@@ -1,7 +1,7 @@
 /** 
  * Version of Permission Guard.
  */
-export const VERSION: string = "2.0.0";
+export const VERSION: string = "2.0.1";
 
 /**
  * Supported version of Deno.
