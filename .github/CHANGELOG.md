@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [2.2.0] - 19-09-2020
+
+- [NO-ISSUE] Revoke flag (#1)
+
 ## [2.1.1] - 19-09-2020
 
 - chore: upgrade to eggs@0.2.2 in CI
