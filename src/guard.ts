@@ -33,6 +33,12 @@ export interface GuardOptions {
    */
   exitOnExtra?: boolean;
   /**
+   * An optional flag to determine whether the guard should
+   * revoke top-level permissions not listed in the `granted`
+   * array.
+   */
+  revoke?: boolean;
+  /**
    * An optional flag to determine the guard should log any
    * warnings or errors to the console.
    */
@@ -257,8 +263,8 @@ const handleUngrantedTopLevelPermissions = (
 ): void => {
   if (options.log) {
     for (const { name } of permissions) {
-      console.error(
-        `permission-guard: error: insecure top-level permission "${
+      console.warn(
+        `permission-guard: warning: insecure top-level permission "${
           permissionNameToFlagMap.get(name)
         }" has been provided`,
       );
@@ -271,6 +277,7 @@ const handleUngrantedTopLevelPermissions = (
         "permission-guard: exiting due to insecure top-level permissions",
       );
     }
+
     Deno.exit(1);
   }
 };
@@ -380,6 +387,9 @@ const handleUnscopedPermissions = (
  * - `exitOnExtra` - a flag to determine whether the guard should
  * stop the process when permissions not listed in the `granted`
  * array have been granted. Default: `true`.
+ * - `revoke` - flag to determine whether the guard should
+ * revoke top-level permissions not listed in the `granted`
+ * array.
  * - `log` - a flag to determine the guard should log any
  * warnings or errors to the console. Default: `false`.
  * 
@@ -403,6 +413,7 @@ export async function guard(options: GuardOptions = {}): Promise<void> {
     granted = [],
     exitOnMissing = false,
     exitOnExtra = true,
+    revoke = false,
     log = false,
   } = options;
 
@@ -415,6 +426,19 @@ export async function guard(options: GuardOptions = {}): Promise<void> {
 
     if (unscopedPermissions.length) {
       handleUnscopedPermissions(unscopedPermissions);
+    }
+  }
+
+  if (revoke) {
+    const permissionsToRevoke = topLevelPermissions.filter(
+      (permissionState) =>
+        !grantedDescriptors.some((grantedDescriptor) =>
+          permissionState.name === grantedDescriptor.name
+        ),
+    );
+
+    for (const permission of permissionsToRevoke) {
+      Deno.permissions.revoke(permission);
     }
   }
 

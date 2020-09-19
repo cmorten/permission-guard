@@ -61,7 +61,7 @@ import { guard } from "https://x.nest.land/permissionGuard@2.1.1/mod.ts";
 
 ## Features
 
-- Protection against unnecessary top-level permissions.
+- Protection against unnecessary top-level permissions. Including ability to revoke undesired permissions.
 - Protection against missing required permissions.
 - Recommendations where permissions could be better scoped (if `log: true` provided).
 - Useful logs detailing the missing or insecure permissions (if `log: true` provided).
