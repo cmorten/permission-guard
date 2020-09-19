@@ -12,5 +12,5 @@ await guard(
   },
 );
 
-// If the guard doesn't exited, can now safely execute our code.
+// If the guard hasn't exited, can now safely execute our code.
 console.log("Code is now executing");
