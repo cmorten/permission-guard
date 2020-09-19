@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [2.1.0] - 19-09-2020
+
+- feat: support Deno 1.4.1. and std 0.70.0
+
 ## [2.0.1] - 18-08-2020
 
 - chore: remove copy pasta image link from readme
