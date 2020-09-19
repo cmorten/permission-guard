@@ -32,7 +32,7 @@ A zero-dependency, minimal permission guard for <a href="https://deno.land/">Den
 ## Getting Started
 
 ```ts
-import { guard } from "https://deno.land/x/permissionGuard@2.1.0/mod.ts";
+import { guard } from "https://deno.land/x/permissionGuard@2.1.1/mod.ts";
 
 await guard();
 
@@ -48,13 +48,13 @@ Before importing, [download and install Deno](https://deno.land/#installation).
 You can then import Permission Guard straight into your project:
 
 ```ts
-import { guard } from "https://deno.land/x/permissionGuard@2.1.0/mod.ts";
+import { guard } from "https://deno.land/x/permissionGuard@2.1.1/mod.ts";
 ```
 
 Permission Guard is also available on [nest.land](https://nest.land/package/permissionGuard), a package registry for Deno on the Blockchain.
 
 ```ts
-import { guard } from "https://x.nest.land/permissionGuard@2.1.0/mod.ts";
+import { guard } from "https://x.nest.land/permissionGuard@2.1.1/mod.ts";
 ```
 
 > **Note:** Permission Guard makes use of the unstable Deno Permissions API which requires `--unstable` to be passed in the Deno `run` command. You can use Permission Guard in applications and not provide the `--unstable` flag, Permission Guard will simply return as a no-op and not provide any defenses.

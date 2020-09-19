@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [2.1.1] - 19-09-2020
+
+- chore: upgrade to eggs@0.2.2 in CI
+
 ## [2.1.0] - 19-09-2020
 
 - feat: support Deno 1.4.1. and std 0.70.0
