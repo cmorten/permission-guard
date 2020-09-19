@@ -261,30 +261,24 @@ const handleUngrantedTopLevelPermissions = (
   permissions: PermissionDescriptorStatus[],
   options: GuardOptions,
 ): void => {
+  if (options.log) {
+    for (const { name } of permissions) {
+      console.warn(
+        `permission-guard: warning: insecure top-level permission "${
+          permissionNameToFlagMap.get(name)
+        }" has been provided`,
+      );
+    }
+  }
+
   if (options.exitOnExtra) {
     if (options.log) {
-      for (const { name } of permissions) {
-        console.error(
-          `permission-guard: error: insecure top-level permission "${
-            permissionNameToFlagMap.get(name)
-          }" has been provided`,
-        );
-      }
-
       console.error(
         "permission-guard: exiting due to insecure top-level permissions",
       );
     }
 
     Deno.exit(1);
-  } else {
-    for (const { name } of permissions) {
-      console.warn(
-        `permission-guard: warn: insecure top-level permission "${
-          permissionNameToFlagMap.get(name)
-        }" has been provided`,
-      );
-    }
   }
 };
 
