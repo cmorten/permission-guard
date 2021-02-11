@@ -1,27 +1,30 @@
 .PHONY: build ci deps doc fmt fmt-check lint lock test typedoc
 
+FILES_TO_FORMAT = ./examples/defaults/index.ts ./examples/granted-recommend-allowlist/index.ts ./examples/granted-strict/index.ts ./examples/granted-strict-with-revoke/index.ts ./src ./test ./deps.ts ./mod.ts ./version.ts
+
 build:
-	@deno run --unstable --lock=lock.json --reload mod.ts
+	@deno run --unstable --reload mod.ts
 
 ci:
 	@make fmt-check
+	@make lint
 	@make build
 	@make test
 
 deps:
-	@npm install -g typescript typedoc
+	@npm install -g typescript typedoc@0.19.2
 
 doc:
 	@deno doc ./mod.ts
 
 fmt:
-	@deno fmt
+	@deno fmt ${FILES_TO_FORMAT}
 
 fmt-check:
-	@deno fmt --check
+	@deno fmt --check ${FILES_TO_FORMAT}
 
 lint:
-	@deno lint --unstable
+	@deno lint --unstable ${FILES_TO_FORMAT}
 
 lock:
 	@deno run --unstable --lock=lock.json --lock-write --reload mod.ts

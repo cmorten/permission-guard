@@ -1,11 +1,11 @@
-import { guard, NET, ENV } from "../../mod.ts";
+import { ENV, guard, NET } from "../../mod.ts";
 
 // You can pass both `Deno.PermissionDescriptor` or `Deno.PermissionName`
 // to the guard. You will need to use a `Deno.PermissionDescriptor` if you
 // wish to grant a scoped permission.
 await guard(
   {
-    granted: [{ name: NET, url: "http://google.com" }, ENV],
+    granted: [{ name: NET, host: "google.com" }, ENV],
     log: true,
     exitOnExtra: true,
     exitOnMissing: true,

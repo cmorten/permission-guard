@@ -1,1 +1,1 @@
-export { expect } from "https://x.nest.land/expect@0.2.4/mod.ts";
+export { expect } from "https://deno.land/x/expect@v0.2.6/mod.ts";

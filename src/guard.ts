@@ -234,7 +234,7 @@ const HTTP_PROTOCOL = /^https?\:\/\//;
  * @returns {Promise<PermissionDescriptorStatus[]>} The requested permission statuses.
  * @private
  */
-const getPermissionDescriptorStatus = async (
+const getPermissionDescriptorStatus = (
   permissionDescriptors: Deno.PermissionDescriptor[],
 ): Promise<
   PermissionDescriptorStatus[]
@@ -282,6 +282,13 @@ const handleUngrantedTopLevelPermissions = (
   }
 };
 
+interface PermissionDescriptorLike {
+  name?: string;
+  url?: string;
+  host?: string;
+  path?: string;
+}
+
 /**
  * Returns a permission's allowlist value if it exists, otherwise
  * an empty string ("") is returned.
@@ -291,9 +298,10 @@ const handleUngrantedTopLevelPermissions = (
  * @private
  */
 const getPermissionAllowlist = (
-  { url, path }: any = {},
+  { url, host, path }: PermissionDescriptorLike = {},
 ): string => {
   if (url) return url.replace(HTTP_PROTOCOL, "");
+  if (host) return host.replace(HTTP_PROTOCOL, "");
   if (path) return path;
 
   return "";

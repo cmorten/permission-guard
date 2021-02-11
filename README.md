@@ -16,6 +16,12 @@ A zero-dependency, minimal permission guard for <a href="https://deno.land/">Den
    <a href="http://hits.dwyl.com/asos-craigmorten/permission-guard"><img src="http://hits.dwyl.com/asos-craigmorten/permission-guard.svg" alt="permission-guard repository visit count" /></a>
    <a href="https://nest.land/package/permissionGuard"><img src="https://nest.land/badge.svg" alt="Published on nest.land" /></a>
 </p>
+<p align="center">
+   <a href="https://deno.land/x/permissionGuard"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Flatest-version%2Fx%2FpermissionGuard%2Fmod.ts" alt="permission-guard latest /x/ version" /></a>
+   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/permissionGuard/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fdep-count%2Fx%2FpermissionGuard%2Fmod.ts" alt="permission-guard dependency count" /></a>
+   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/permissionGuard/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fupdates%2Fx%2FpermissionGuard%2Fmod.ts" alt="permission-guard dependency outdatedness" /></a>
+   <a href="https://deno-visualizer.danopia.net/dependencies-of/https/deno.land/x/permissionGuard/mod.ts"><img src="https://img.shields.io/endpoint?url=https%3A%2F%2Fdeno-visualizer.danopia.net%2Fshields%2Fcache-size%2Fx%2FpermissionGuard%2Fmod.ts" alt="permission-guard cached size" /></a>
+</p>
 
 ---
 
@@ -32,7 +38,7 @@ A zero-dependency, minimal permission guard for <a href="https://deno.land/">Den
 ## Getting Started
 
 ```ts
-import { guard } from "https://deno.land/x/permissionGuard@2.2.0/mod.ts";
+import { guard } from "https://deno.land/x/permissionGuard@2.3.0/mod.ts";
 
 await guard();
 
@@ -48,13 +54,13 @@ Before importing, [download and install Deno](https://deno.land/#installation).
 You can then import Permission Guard straight into your project:
 
 ```ts
-import { guard } from "https://deno.land/x/permissionGuard@2.2.0/mod.ts";
+import { guard } from "https://deno.land/x/permissionGuard@2.3.0/mod.ts";
 ```
 
 Permission Guard is also available on [nest.land](https://nest.land/package/permissionGuard), a package registry for Deno on the Blockchain.
 
 ```ts
-import { guard } from "https://x.nest.land/permissionGuard@2.2.0/mod.ts";
+import { guard } from "https://x.nest.land/permissionGuard@2.3.0/mod.ts";
 ```
 
 > **Note:** Permission Guard makes use of the unstable Deno Permissions API which requires `--unstable` to be passed in the Deno `run` command. You can use Permission Guard in applications and not provide the `--unstable` flag, Permission Guard will simply return as a no-op and not provide any defenses.
