@@ -1,5 +1,9 @@
 # ChangeLog
 
+## [2.3.0] - 11-02-2021
+
+- feat: support Deno 1.7.2
+
 ## [2.2.0] - 19-09-2020
 
 - [NO-ISSUE] Revoke flag (#1)
