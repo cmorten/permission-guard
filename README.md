@@ -13,7 +13,6 @@ A zero-dependency, minimal permission guard for <a href="https://deno.land/">Den
    <img src="https://img.shields.io/github/forks/asos-craigmorten/permission-guard" alt="permission-guard forks" />
    <img src="https://img.shields.io/github/license/asos-craigmorten/permission-guard" alt="permission-guard license" />
    <a href="https://GitHub.com/asos-craigmorten/permission-guard/graphs/commit-activity"><img src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" alt="permission-guard is maintained" /></a>
-   <a href="http://hits.dwyl.com/asos-craigmorten/permission-guard"><img src="http://hits.dwyl.com/asos-craigmorten/permission-guard.svg" alt="permission-guard repository visit count" /></a>
    <a href="https://nest.land/package/permissionGuard"><img src="https://nest.land/badge.svg" alt="Published on nest.land" /></a>
 </p>
 <p align="center">
