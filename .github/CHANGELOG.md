@@ -1,5 +1,10 @@
 # ChangeLog
 
+## [2.4.0] - 25-06-2021
+
+- feat: support Deno `1.11.2`
+- feat: support `env` and `run` permission allowlists
+
 ## [2.3.0] - 11-02-2021
 
 - feat: support Deno 1.7.2

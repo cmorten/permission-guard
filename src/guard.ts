@@ -1,6 +1,6 @@
-/** 
+/**
  * A Deno permission name or a full permission descriptor.
- * 
+ *
  * See https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * @public
@@ -9,9 +9,9 @@ export type GuardGrant = Deno.PermissionName | Deno.PermissionDescriptor;
 
 /**
  * Configuration for the guard.
- * 
+ *
  * Use with the _guard()_ method.
- * 
+ *
  * @public
  */
 export interface GuardOptions {
@@ -47,151 +47,151 @@ export interface GuardOptions {
 
 /**
  * A permission descriptor merged with it's status.
- * 
+ *
  * See https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
- * 
+ *
  * @private
  */
-type PermissionDescriptorStatus =
-  & Deno.PermissionStatus
-  & Deno.PermissionDescriptor;
+type PermissionDescriptorStatus = {
+  state: Deno.PermissionState;
+} & Deno.PermissionDescriptor;
 
-/** 
+/**
  * A granted status for a permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
- * 
+ *
  * @public
  */
 export const GRANTED: Deno.PermissionState = "granted";
-/** 
+/**
  * A denied status for a permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
- * 
+ *
  * @public
  */
 export const DENIED: Deno.PermissionState = "denied";
-/** 
+/**
  * A prompt status for a permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
- * 
+ *
  * @public
  */
 export const PROMPT: Deno.PermissionState = "prompt";
 
-/** 
+/**
  * The "powerful feature" "run" which needs permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * Note that the definition of `PermissionName` in the above spec is swapped
  * out for a set of Deno permissions which are not web-compatible.
- * 
+ *
  * @public
  */
 export const RUN: Deno.PermissionName = "run";
-/** 
+/**
  * The "powerful feature" "read" which needs permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * Note that the definition of `PermissionName` in the above spec is swapped
  * out for a set of Deno permissions which are not web-compatible.
- * 
+ *
  * @public
  */
 export const READ: Deno.PermissionName = "read";
-/** 
+/**
  * The "powerful feature" "write" which needs permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * Note that the definition of `PermissionName` in the above spec is swapped
  * out for a set of Deno permissions which are not web-compatible.
- * 
+ *
  * @public
  */
 export const WRITE: Deno.PermissionName = "write";
-/** 
+/**
  * The "powerful feature" "net" which needs permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * Note that the definition of `PermissionName` in the above spec is swapped
  * out for a set of Deno permissions which are not web-compatible.
- * 
+ *
  * @public
  */
 export const NET: Deno.PermissionName = "net";
-/** 
+/**
  * The "powerful feature" "env" which needs permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * Note that the definition of `PermissionName` in the above spec is swapped
  * out for a set of Deno permissions which are not web-compatible.
- * 
+ *
  * @public
  */
 export const ENV: Deno.PermissionName = "env";
-/** 
+/**
  * The "powerful feature" "plugin" which needs permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * Note that the definition of `PermissionName` in the above spec is swapped
  * out for a set of Deno permissions which are not web-compatible.
- * 
+ *
  * @public
  */
 export const PLUGIN: Deno.PermissionName = "plugin";
-/** 
+/**
  * The "powerful feature" "hrtime" which needs permission.
  *
  * See:
- * 
+ *
  * - https://w3c.github.io/permissions/#status-of-a-permission
  * - https://github.com/denoland/deno/blob/master/cli/js/lib.deno.unstable.d.ts
  *
  * Note that the definition of `PermissionName` in the above spec is swapped
  * out for a set of Deno permissions which are not web-compatible.
- * 
+ *
  * @public
  */
 export const HRTIME: Deno.PermissionName = "hrtime";
 
 /**
  * A list of all top-level permissions as descriptors.
- * 
+ *
  * @private
  */
 const topLevelPermissions: Deno.PermissionDescriptor[] = [
@@ -206,7 +206,7 @@ const topLevelPermissions: Deno.PermissionDescriptor[] = [
 
 /**
  * A map of top-level permissions to their flag.
- * 
+ *
  * @private
  */
 const permissionNameToFlagMap: Map<Deno.PermissionName, string> = new Map(
@@ -215,22 +215,28 @@ const permissionNameToFlagMap: Map<Deno.PermissionName, string> = new Map(
 
 /**
  * A list of top-level permissions that support an optional allowlist.
- * 
+ *
  * @private
  */
-const permissionsWithAllowlists: Deno.PermissionName[] = [READ, NET, WRITE];
+const permissionsWithAllowlists: Deno.PermissionName[] = [
+  ENV,
+  READ,
+  RUN,
+  NET,
+  WRITE,
+];
 
 /**
  * Regex for matching HTTP/HTTPS protocols.
- * 
+ *
  * @private
  */
 const HTTP_PROTOCOL = /^https?\:\/\//;
 
 /**
  * Adds the current grant status to each the provided permission descriptors.
- * 
- * @param {Deno.PermissionDescriptor[]} permissionDescriptors 
+ *
+ * @param {Deno.PermissionDescriptor[]} permissionDescriptors
  * @returns {Promise<PermissionDescriptorStatus[]>} The requested permission statuses.
  * @private
  */
@@ -242,18 +248,22 @@ const getPermissionDescriptorStatus = (
   Promise.all(permissionDescriptors.map(
     async (
       permissionDescriptor: Deno.PermissionDescriptor,
-    ): Promise<PermissionDescriptorStatus> => ({
-      ...permissionDescriptor,
-      ...await Deno.permissions.query(permissionDescriptor),
-    }),
+    ): Promise<PermissionDescriptorStatus> => {
+      const { state } = await Deno.permissions.query(permissionDescriptor);
+
+      return ({
+        ...permissionDescriptor,
+        state,
+      });
+    },
   ));
 
 /**
  * Handles the optional logging and process exiting for scenarios
  * in which insecure and ungranted top-level permissions have been set.
- * 
- * @param {PermissionDescriptorStatus[]} permissions 
- * @param {GuardOptions} options 
+ *
+ * @param {PermissionDescriptorStatus[]} permissions
+ * @param {GuardOptions} options
  * @returns {void}
  * @private
  */
@@ -284,22 +294,27 @@ const handleUngrantedTopLevelPermissions = (
 
 interface PermissionDescriptorLike {
   name?: string;
+  state?: Deno.PermissionState;
   url?: string;
   host?: string;
   path?: string;
+  command?: string;
+  variable?: string;
 }
 
 /**
  * Returns a permission's allowlist value if it exists, otherwise
  * an empty string ("") is returned.
- * 
+ *
  * @param param
  * @returns {string}
  * @private
  */
 const getPermissionAllowlist = (
-  { url, host, path }: PermissionDescriptorLike = {},
+  { url, host, path, command, variable }: PermissionDescriptorLike = {},
 ): string => {
+  if (command) return command;
+  if (variable) return variable;
   if (url) return url.replace(HTTP_PROTOCOL, "");
   if (host) return host.replace(HTTP_PROTOCOL, "");
   if (path) return path;
@@ -310,9 +325,9 @@ const getPermissionAllowlist = (
 /**
  * Handles the optional logging and process exiting for scenarios
  * in which configured / required permissions are missing.
- * 
- * @param {PermissionDescriptorStatus[]} permissions 
- * @param {GuardOptions} options 
+ *
+ * @param {PermissionDescriptorStatus[]} permissions
+ * @param {GuardOptions} options
  * @returns {void}
  * @private
  */
@@ -321,7 +336,7 @@ const handleMissingGrantedPermissions = (
   options: GuardOptions,
 ): void => {
   if (options.log) {
-    for (const { name, state, ...parameters } of permissions) {
+    for (const { name, ...parameters } of permissions) {
       const permissionArgument = getPermissionAllowlist(parameters);
       console.warn(
         `permission-guard: warning: missing permission "${
@@ -344,8 +359,8 @@ const handleMissingGrantedPermissions = (
 /**
  * Filters the provided permissions to those which support
  * an allowlist but have be left with top-level scope.
- * 
- * @param {Deno.PermissionDescriptor[]} granted 
+ *
+ * @param {Deno.PermissionDescriptor[]} granted
  * @returns {Deno.PermissionDescriptor[]}
  * @private
  */
@@ -360,7 +375,7 @@ const getUnscopedPermissions = (
 /**
  * Handles the optional logging of recommendations when a top-level permission
  * has been requested that supports allowlisting.
- * 
+ *
  * @param {PermissionDescriptorStatus[]} permissions
  * @returns {void}
  * @private
@@ -379,14 +394,14 @@ const handleUnscopedPermissions = (
 
 /**
  * Provides a set of defences for your application.
- * 
+ *
  * This is done by verifying:
- * 
+ *
  * 1. No unnecessary permissions have been set at runtime.
  * 2. Requested / required permissions have been set at runtime.
- * 
+ *
  * Optional configuration parameters for the guard include:
- * 
+ *
  * - `granted` - a list of Deno permission names or descriptors
  * that should be permitted by the guard. Default: `[]`.
  * - `exitOnMissing` - a flag to determine whether the guard
@@ -400,18 +415,18 @@ const handleUnscopedPermissions = (
  * array.
  * - `log` - a flag to determine the guard should log any
  * warnings or errors to the console. Default: `false`.
- * 
+ *
  * If the guard determines to stop the process, the exit code will
  * be `1`, i.e. `Deno.exit(1)`.
- * 
+ *
  * As the Deno Permissions API is currently tagged as "unstable", this
  * method will currently only perform the above defenses if the process
  * is started with the `--unstable` flag. Once the API becomes stable,
  * this flag will no longer be required. If the flag is not provided,
  * guard will simply return as a no-op, so it is safe to use the guard
  * in applications that won't be passed the `--unstable` flag.
- * 
- * @param {GuardOptions} options 
+ *
+ * @param {GuardOptions} options
  * @returns {Promise<void>}
  */
 export async function guard(options: GuardOptions = {}): Promise<void> {

@@ -1,9 +1,9 @@
-/** 
+/**
  * Version of Permission Guard.
  */
-export const VERSION = "2.3.0";
+export const VERSION = "2.4.0";
 
 /**
  * Supported version of Deno.
  */
-export const DENO_SUPPORTED_VERSIONS = ["1.7.2"];
+export const DENO_SUPPORTED_VERSIONS = ["1.11.2"];
